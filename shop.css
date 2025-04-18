@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* common css codes - start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 500vh;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #c0b8b8;
+  --selection-color: #d7b29d;
+  --text-black: #1f2836;
+  --showcase-orange: #f9835c;
+  --showcase-btn-text: #eae9ea;
+}
+
+.container {
+  padding: 2rem 7%;
+}
+
+/* common css codes - end */
+
+header .navbar ul li:nth-child(2) a {
+  color: var(--selection-color);
+}
+
+/* header - start */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10rem;
+  background-color: #fff;
+  box-shadow: 0 0 1.5rem rgb(0, 0, 0, 0.3);
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+.header .navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.header .navbar ul li a {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.header .navbar ul li:hover a {
+  color: var(--selection-color);
+}
+
+.header .navbar .icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .navbar .icons i {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.header .navbar .icons i:hover {
+  color: var(--selection-color);
+}
+
+.header .navbar .icons i {
+  font-size: 2rem;
+}
+
+/* header - end */
+
+/* product side - start */
+
+#products {
+  margin: 5rem 10rem;
+  padding-top: 10rem;
+  height: auto;
+  padding-bottom: 10rem;
+}
+
+#products h1 {
+  color: var(--text-black);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#products h1::after {
+  display: block;
+  height: 5px;
+  width: 50px;
+  content: "";
+  background-color: var(--showcase-orange);
+  position: relative;
+  margin-top: 2rem;
+}
+
+#products p {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+#products .products {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#products .products .cart {
+  width: 30rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#products .produts .cart:hover {
+  margin-top: 55.5px;
+}
+
+#products .products .cart img {
+  object-fit: cover;
+  width: 300px;
+  height: 338px;
+}
+
+#products .products .cart .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 338px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#products .products .cart:hover .cover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#products .products .cart .stars {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+#products .products .cart .stars i {
+  color: gold;
+}
+
+#products .products .cart p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#products .products .cart #price {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#products .products .cart .btn {
+  opacity: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--showcase-orange);
+  padding: 1.5rem 2.5rem;
+  color: var(--showcase-btn-text);
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#products .products .cart:hover .btn {
+  opacity: 1;
+}
+
+/* product side - end */
+
+/* footer - start */
+#footer-side {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-black);
+  padding: 5rem 1rem;
+}
+
+#footer-side .nav-side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+
+#footer-side .nav-side .brand-container {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 2rem;
+  max-width: 30rem;
+}
+
+#footer-side .nav-side .brand-container img {
+  width: 145px;
+  height: 60px;
+}
+
+#footer-side .nav-side .brand-container #desc {
+  color: var(--showcase-btn-text);
+  font-size: 1.5rem;
+}
+
+#footer-side .nav-side .categories {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-side .nav-side .categories h2 {
+  color: var(--showcase-btn-text);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#footer-side .nav-side .categories ul li {
+  margin-bottom: 0.5rem;
+}
+
+#footer-side .nav-side .categories ul li a {
+  color: var(--showcase-btn-text);
+  font-size: 1.6rem;
+}
+
+#footer-side .nav-side .contact {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-side .nav-side .contact h2 {
+  color: var(--showcase-btn-text);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#footer-side .nav-side .contact h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--showcase-btn-text);
+}
+
+#footer-side .nav-side .contact p {
+  color: var(--showcase-btn-text);
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#footer-side .nav-side .social {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-side .nav-side .social h2 {
+  color: var(--showcase-btn-text);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#footer-side .nav-side .social ul {
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  gap: 1.5rem;
+}
+
+#footer-side .nav-side .social ul li img {
+  width: 8rem;
+  aspect-ratio: 1;
+}
+
+#footer-side .under-side {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#footer-side .under-side p {
+  color: var(--showcase-btn-text);
+  font-size: 1.5rem;
+}
+
+#footer-side .under-side div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#footer-side .under-side .social-icons div {
+  background-color: var(--showcase-btn-text);
+  border-radius: 50%;
+  width: 5rem;
+  aspect-ratio: 1;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#footer-side .under-side .social-icons i {
+  font-size: 2rem;
+}
+
+#footer-side .under-side .social-icons div:hover,
+#footer-side .under-side .social-icons div:hover i {
+  background-color: var(--text-black);
+  color: var(--showcase-btn-text);
+}
+/* footer - end */
